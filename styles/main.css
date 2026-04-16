@@ -1,0 +1,184 @@
+/* 全局初始化 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* 1. 顶部区域样式 */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 20px;
+    color: #333;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #2196F3;
+}
+
+.add-btn {
+    padding: 8px 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #1976D2;
+}
+
+/* 2. 导航区域样式 */
+.nav {
+    display: flex;
+    background-color: #333;
+}
+
+.nav-item {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #8e1d2296;
+}
+
+/* 3. 主内容区通用样式 */
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* A. 数据卡片区 */
+.card-area {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* B. 任务列表区 */
+.task-area, .extra-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.task-area h2, .extra-area h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.task-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.task-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.status {
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.status.ongoing {
+    background-color: #e3f2fd;
+    color: #2196F3;
+}
+
+.status.todo {
+    background-color: #fff3e0;
+    color: #ff9800;
+}
+
+.status.done {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+/* 附加信息模块 */
+.schedule-list {
+    list-style: none;
+}
+
+.schedule-list li {
+    padding: 8px 0;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .search-input {
+        max-width: 100%;
+    }
+
+    .card-area {
+        flex-direction: column;
+    }
+}

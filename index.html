@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <!-- 关键：适配移动端 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的今日任务</title>
-    <!-- 引入CSS文件 -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任务管理面板</title>
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-    <!-- 1. 顶部区域（header） -->
+    <!-- 1. 顶部区域 -->
     <header class="header">
-        <h1 class="logo">今日任务</h1>
-        <input type="text" class="search-input" placeholder="搜索任务...">
+        <div class="logo">TaskFlow</div>
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="搜索任务..." />
+        </form>
         <button class="add-btn">新建任务</button>
     </header>
 
-    <!-- 2. 导航区域（nav） -->
+    <!-- 2. 导航区域 -->
     <nav class="nav">
-        <a href=" " class="nav-item active">Dashboard</a >
-        <a href="#" class="nav-item">My Tasks</a >
-        <a href="#" class="nav-item">Settings</a >
+        <a href="#" class="nav-item active">Dashboard</a>
+        <a href="#" class="nav-item">My Tasks</a>
+        <a href="#" class="nav-item">Settings</a>
     </nav>
 
-    <!-- 3. 主内容区（main） -->
+    <!-- 3. 主内容区 -->
     <main class="main">
         <!-- A. 数据卡片区 -->
-        <section class="card-area">
-            <div class="card">
-                <h3>今日待办</h3>
-                <p>3 个任务</p >
-            </div>
-            <div class="card">
-                <h3>已完成任务</h3>
-                <p>2 个任务</p >
+        <section class="card-section">
+            <h2>数据概览</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>今日待办</h3>
+                    <p class="card-number">5 项</p>
+                </article>
+                <article class="card">
+                    <h3>已完成</h3>
+                    <p class="card-number">12 项</p>
+                </article>
             </div>
         </section>
 
         <!-- B. 任务列表区 -->
-        <section class="task-area">
-            <h2>任务列表</h2>
-            <div class="task-item">
-                <h4>完成HTML页面开发</h4>
-                <p>截止日期：2026-04-20</p >
-                <span class="status ongoing">进行中</span>
-            </div>
-            <div class="task-item">
-                <h4>提交Git代码到仓库</h4>
-                <p>截止日期：2026-04-21</p >
-                <span class="status todo">待开始</span>
-            </div>
-            <div class="task-item">
-                <h4>写项目README说明</h4>
-                <p>截止日期：2026-04-22</p >
-                <span class="status done">已完成</span>
-            </div>
-            <div class="task-item">
-                <h4>截图提交作业</h4>
-                <p>截止日期：2026-04-23</p >
-                <span class="status todo">待开始</span>
-            </div>
+        <section class="task-section">
+            <h2>我的任务</h2>
+            <ul class="task-list">
+                <li class="task-item">
+                    <div class="task-content">
+                        <h4>完成项目文档编写</h4>
+                        <p>截止日期: 2023-10-27</p>
+                    </div>
+                    <span class="status status-ongoing">进行中</span>
+                </li>
+                <li class="task-item">
+                    <div class="task-content">
+                        <h4>团队周会汇报</h4>
+                        <p>截止日期: 2023-10-28</p>
+                    </div>
+                    <span class="status status-done">已完成</span>
+                </li>
+                <li class="task-item">
+                    <div class="task-content">
+                        <h4>前端页面开发</h4>
+                        <p>截止日期: 2023-10-29</p>
+                    </div>
+                    <span class="status status-ongoing">进行中</span>
+                </li>
+                <li class="task-item">
+                    <div class="task-content">
+                        <h4>提交作业并截图</h4>
+                        <p>截止日期: 2023-10-30</p>
+                    </div>
+                    <span class="status status-done">已完成</span>
+                </li>
+            </ul>
         </section>
 
-        <!-- 4. 附加信息模块（团队成员） -->
-        <section class="extra-area">
-            <h2>团队成员</h2>
+        <!-- C. 附加信息模块 -->
+        <section class="extra-section">
+            <h2>今日日程</h2>
             <ul class="schedule-list">
-                <li>丁世杰</li>
-                <li>世杰丁</li>
-                <li>杰丁世</li>
+                <li>10:00 - 11:00 项目启动会</li>
+                <li>14:00 - 15:00 代码评审</li>
             </ul>
         </section>
     </main>
